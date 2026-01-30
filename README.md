@@ -1,7 +1,7 @@
 # Aplicación Angular – Gestión de Empleados (IES Son Ferrer)
 
 Esta aplicación web, desarrollada en **Angular**, permite visualizar, añadir y eliminar empleados del instituto **IES Son Ferrer**.  
-El proyecto simula una pequeña base de datos gestionada desde el navegador, utilizando **servicios** y **formularios reactivos**.
+El proyecto simula una pequeña base de datos gestionada desde el navegador, utilizando **servicios** y **formularios**.
 
 ---
 
