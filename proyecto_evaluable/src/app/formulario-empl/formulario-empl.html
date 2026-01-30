@@ -1,0 +1,63 @@
+<div>
+
+    <form [formGroup]="formularioEmpl" (ngSubmit)="handleSubmit()" class="formulario-empleado">
+
+        <fieldset>
+            <label for="empleadoNombre">Nombre empleado</label>
+            <input id="empleadoNombre" type="text" formControlName="nombre">
+            
+            <!--.Touched escrito para que los mensajes de error solo se muestren despues de clicar y salir de la casilla seleccionada-->
+            @if(nombre.hasError("required") && nombre.touched) {
+                <p>Nombre es obligatorio</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label for="empleadoApellidos">Apellidos</label>
+            <input id="empleadoApellidos" type="text" formControlName="apellidos">
+            @if(apellidos.hasError("required") && apellidos.touched) {
+                <p>Apellidos es obligatorio</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label for="empleadoTelefono">Telefono</label>
+            <input id="empleadoTelefono" type="text" formControlName="telefono">
+            @if(telefono.hasError("required") && telefono.touched){
+                <p>Telefono es obligatorio</p>
+            }@else if(telefono.hasError("maxlength") && telefono.touched){
+                <p>Su telefono debe tener como máximo 11 digitos</p>
+            }@else if(telefono.hasError("minlength") && telefono.touched){
+                <p>Su telefono debe tener como mínimo 9 digitos</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <label for="empleadoEmail">Email</label>
+            <input id="empleadoEmail" type="email" formControlName="correo">
+            @if(correo.hasError("required") && correo.touched){
+                <p>Correo obligatorio</p>
+            }@else if(correo.hasError("email") && correo.touched){
+                <p>Su correo no es valido</p>
+            }
+        </fieldset>
+
+        <fieldset>
+            <select name="input" formControlName="categoria">
+                <option value="">Puesto de trabajo...</option>
+                <option value="DIW">DIW</option>
+                <option value="DWEC">DWEC</option>
+                <option value="DWES">DWES</option>
+                <option value="IPO">IPO</option>
+                <option value="ERD">ERD</option>
+                <option value="DAW">DAW</option>
+                <option value="SOS">SOS</option>
+                <option value="PRO">PRO</option>
+            </select>
+        </fieldset>
+
+        <!--Boton desactivo por defecto hasta introducir lo datos requeridos-->
+        <button type="submit" [disabled]="formularioEmpl.invalid">Crear empleado</button>
+    </form>
+
+</div>

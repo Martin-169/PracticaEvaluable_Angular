@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<ul>
+    @for (empleado of empleadoService.empleados; track $index){
+        <li class="empleado-card">
+            <h2>{{empleado.id}}</h2>
+            <h2>{{empleado.nombre}}</h2>
+            <h3>{{empleado.apellidos}}</h3>
+            <h3>{{empleado.telefono}}</h3>
+            <h3>{{empleado.correo}}</h3>
+            <h3>{{empleado.categoria}}</h3>
+
+            <button (click)="borrar(empleado.id)">Borrar</button>
+        </li>
+    }
+</ul>

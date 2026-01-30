@@ -1,0 +1,48 @@
+/* Estilo general del header */
+header {
+  background-color: #2c3e50; /* Azul oscuro elegante */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Título principal */
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Menú de navegación */
+nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Botones del menú */
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+nav a:hover {
+  background-color: #34495e; /* Un tono más claro al pasar el ratón */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

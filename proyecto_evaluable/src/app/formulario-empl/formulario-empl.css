@@ -1,0 +1,83 @@
+/* Contenedor del formulario */
+.formulario-empleado {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cada bloque del formulario */
+.formulario-empleado fieldset {
+  border: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas */
+.formulario-empleado label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+/* Inputs y select */
+.formulario-empleado input,
+.formulario-empleado select {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al enfocar */
+.formulario-empleado input:focus,
+.formulario-empleado select:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 4px rgba(41,128,185,0.4);
+  outline: none;
+}
+
+/* Mensajes de error */
+.formulario-empleado p {
+  color: #c0392b;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Botón */
+.formulario-empleado button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover del botón */
+.formulario-empleado button:hover:not(:disabled) {
+  background-color: #34495e;
+}
+
+/* Botón deshabilitado */
+.formulario-empleado button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .formulario-empleado {
+    margin: 20px;
+    padding: 20px;
+  }
+}

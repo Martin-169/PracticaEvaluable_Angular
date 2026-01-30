@@ -1,0 +1,44 @@
+/* Logo centrado y con tamaño adecuado */
+.logo {
+  display: block;
+  margin: 30px auto 20px;
+  width: 180px;
+  height: auto;
+}
+
+/* Contenedor del texto */
+.home-texto {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título */
+.home-texto h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Párrafos */
+.home-texto p {
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .home-texto {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+}
